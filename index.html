@@ -1,29 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon"> 
-    <title>RaccoonShop</title>
-    <link rel="stylesheet" href="css/estilos.css">
-   
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon"> 
+<title>Racoon Shop</title>
+<link rel="stylesheet" href="css/estilos.css" />
 </head>
 <body>
-    <header>
-        <img src="assets/img/logo.png" alt="logo" class="logo">
+<header class="header">
+<img src="assets/img/logo.png" alt="logo" class="logo">
 
-        <form action="#" method="get" class="Buscar">
-            <input 
-            type="search"
-            placeholder="Buscar..."
-            name="q">
 
-            <button type="submit">🔍</button>
-        </form>
+<input type="text" id="buscador" placeholder="Buscar producto..." />
 
-        <img src="assets/icons/shopping-cart.gif" alt="carrito" class="carrito">
 
-    </header>
-    
+<select id="filtroCategoria">
+<option value="all">Todas las categorías</option>
+</select>
+
+
+<select id="ordenar">
+<option value="default">Ordenar</option>
+<option value="precio-asc">Precio ↑</option>
+<option value="precio-desc">Precio ↓</option>
+<option value="nombre-asc">Nombre A-Z</option>
+<option value="nombre-desc">Nombre Z-A</option>
+</select>
+</header>
+
+
+<main>
+<section id="productos" class="productos"></section>
+
+
+<aside class="carrito">
+<h2>carrito</h2>
+<img src="assets/icons/shopping-cart.gif" alt="carrito" class="gif">
+<div id="carrito-items"></div>
+<p class="total">Total: $<span id="total">0</span></p>
+</aside>
+</main>
+
+
+<script src="js/main.js"></script>
 </body>
 </html>
