@@ -4,7 +4,7 @@ import {
   filtrarPorCategoria,
   buscarProductos,
   ordenarProductos
-} from './filters.js';
+} from './filtros.js';
 
 
 
